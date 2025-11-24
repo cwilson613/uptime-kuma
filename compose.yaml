@@ -9,7 +9,7 @@ services:
       - traefik
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.uptime-kuma.rule=Host(\`status.vanderlyn.house\`)"
+      - "traefik.http.routers.uptime-kuma.rule=Host(`status.vanderlyn.house`)"
       - "traefik.http.routers.uptime-kuma.entrypoints=websecure"
       - "traefik.http.routers.uptime-kuma.tls=true"
       - "traefik.http.routers.uptime-kuma.tls.certresolver=leresolver"
