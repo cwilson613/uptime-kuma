@@ -3,6 +3,9 @@ services:
     image: louislam/uptime-kuma:1
     container_name: uptime-kuma
     restart: unless-stopped
+    dns:
+      - 192.168.0.5  # Technitium DNS server
+      - 1.1.1.1      # Cloudflare DNS fallback
     volumes:
       - uptime-kuma-data:/app/data
     networks:
